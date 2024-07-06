@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quem Somos com Grid de Imagens</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Estilos CSS personalizados -->
+    <style>
+        body {
+            background-color: #0d8a79;
+            color: #ffffff;
+            font-family: "Poppins", sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        section {
+            padding: 28px 8%;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: flex-start; /* Alinha os itens no topo */
+        }
+
+        .text-container {
+            width: 50%;
+            padding-right: 20px;
+        }
+
+        .image-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 10px;
+            margin-left: auto; /* Empurra para a direita */
+            max-width: 50%; /* Ocupa metade da largura da seção */
+            align-self: flex-start; /* Faz o grid subir mais */
+        }
+
+        .image-grid img {
+            width: 100%;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+        }
+
+        .image-grid img:hover {
+            transform: scale(1.05);
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        .section-subtitle {
+            font-size: 1.5rem;
+            color: rgb(151, 199, 79);
+            margin-bottom: 20px;
+        }
+
+        .btn-default {
+            border: none;
+            display: inline-block; /* Transforma em bloco para ocupar a largura necessária */
+            background-color: rgb(151, 199, 79);
+            color: #fff;
+            padding: 12px 20px;
+            border-radius: 12px;
+            font-weight: bold;
+            text-decoration: none;
+            box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-default:hover {
+            background-color: rgb(169, 255, 41);
+        }
+    </style>
+</head>
+<body>
+
+<section id="quemsomos">
+    <div class="text-container">
+        <h2 class="section-title">Quem Somos</h2>
+        <h3 class="section-subtitle">Lorem ipsum dolor sit amet consectetur adipisicing elit...</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos, architecto at? Animi illo, minus ducimus...</p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita ullam ex quod veritatis obcaecati sunt cumque...</p>
+        <a href="#" class="btn-default">Solicitar Orçamento</a>
+    </div>
+    <div class="image-grid">
+        <img src="img/cozinha2.jpg" alt="Imagem 1">
+        <img src="img/cozinha3.jpg" alt="Imagem 2">
+        <img src="img/cozinha4.jpg" alt="Imagem 3">
+        <!-- Adicione mais imagens conforme necessário -->
+    </div>
+</section>
+
+<!-- Bootstrap JavaScript (Bundle inclui Popper.js) -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,55 @@
+/* Seção de Contato */
+#contato {
+    padding: 50px 8%;
+    background-color: #0d8a79; /* Cor de fundo da seção */
+    color: #ffffff; /* Cor do texto */
+    text-align: center;
+   
+}
+
+#contato .section-title {
+    font-size: 2.5rem;
+    color: rgb(151, 199, 79);
+    margin-bottom: 10px;
+}
+
+#contato .section-subtitle {
+    font-size: 1.5rem;
+    color: #ffffff;
+    margin-bottom: 40px;
+}
+
+.contact-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.contact-info, .contact-map {
+    flex: 1 1 45%;
+    min-width: 300px;
+    margin-bottom: 20px;
+}
+
+.contact-info p {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+/* Responsividade */
+@media screen and (max-width: 768px) {
+    .contact-container {
+        flex-direction: column;
+    }
+
+    .contact-info, .contact-map {
+        width: 100%;
+    }
+
+    .contact-map iframe {
+        width: 100%;
+        height: 300px; /* Ajuste a altura conforme necessário */
+    }
+}

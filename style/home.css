@@ -1,0 +1,168 @@
+#home{
+    display: flex;
+    min-height: 100vh; /* Corrigido para evitar barra de rolagem */
+    position: relative;
+    overflow: hidden; /* Evita barra de rolagem */
+}
+
+#texthome{
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    margin-top: 5%;
+}
+
+#texthome .title{
+    font-size: 4rem;
+    color: rgb(151, 199, 79);
+}
+
+#texthome .description{
+    font-size: 1.2rem;
+}
+
+#texthome_btn{
+    display: flex;
+    gap: 24px;
+}
+
+#texthome_btn a{
+    text-decoration: none;
+    color: #1d1d1d;
+}
+
+#phone_btn{
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 8px 14px;
+    font-weight: 500;
+    box-shadow: 0px 0px 12px 4px rgba(0, 0,0, 0.1);
+    border-radius: 12px;
+}
+
+
+
+#banner{
+    display: flex;
+    align-items: start;
+    margin-left: auto;
+    width: 50%;
+    z-index: 2;
+}
+
+#banner img{
+    height: 80%;
+    width: auto;
+}
+
+#shape {
+    background-color: rgb(151, 199, 79);
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    border-radius: 40% 30% 0% 20%;
+    top: 0;
+    right: 0;
+    z-index: 1;
+}
+
+@media screen and (max-width: 1170px) {
+    #home{
+        min-height: 100%;
+        padding-top: 0px;
+    }
+
+    #banner,
+    #banner img,
+    #shape{
+        display: none;
+    }
+    
+    #texthome{
+        width: 100%;
+        text-align: center;
+        align-items: center;
+    }
+
+}
+
+/*@media screen and (max-width: 450px) { CASO QUEIRA TIRAR O BOTÃO DO TELEFONE NO RECURSIVO
+    #phone_btn button{
+        display: none;
+    }
+}*/
+
+
+/* CSS para a seção de planos */
+
+#Service {
+    text-align: center;
+    padding: 50px 8%;
+}
+
+#Service .section-subtitle{
+    font-size: 1.5rem;
+    color: #ffffff;
+    margin-bottom: 40px;
+}
+
+#Service .section-title {
+    font-size: 2.5rem;
+    color: rgb(151, 199, 79);
+    margin-bottom:  10px;
+}
+
+.plans-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.plan {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 10px; /* Espaçamento entre os elementos */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    flex: 1 1 30%; /* Ajusta a largura dos planos */
+    min-height: 250px; /* Altura mínima para garantir alinhamento */
+    box-sizing: border-box;
+}
+
+.plan:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.plan-title {
+    font-size: 1.8rem;
+    color: #0d8a79;
+    margin-bottom: 15px;
+}
+
+.plan-details {
+    list-style: none;
+    padding: 0;
+    font-size: 1rem;
+    color: #333333;
+}
+
+.plan-details li {
+    margin-bottom: 10px;
+}
+
+@media screen and (max-width: 767px) {
+    .plans-container {
+        flex-direction: column;
+    }
+
+    .plan {
+        width: 100%; /* Mantém o layout em coluna para dispositivos móveis */
+        margin-bottom: 30px;
+    }
+}

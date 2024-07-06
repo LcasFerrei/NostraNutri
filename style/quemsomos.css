@@ -1,0 +1,85 @@
+/* Seção "Quem Somos" */
+#quemsomos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+    background-color: #0d8a79;
+}
+
+#quemsomos .text-container {
+    flex: 1 1 100%;
+    display: flex;
+    justify-content: space-between; /* Espaçamento entre os conteúdos esquerdo e direito */
+    max-width: 800px;
+    margin: 0 auto; /* Centraliza horizontalmente */
+}
+
+#quemsomos .left-content {
+    flex: 1; /* Ocupa metade do espaço disponível */
+    text-align: left; /* Alinha o texto à esquerda */
+    margin-right: 20px; /* Espaçamento entre os conteúdos */
+}
+
+#quemsomos .right-content {
+    flex: 1; /* Ocupa metade do espaço disponível */
+    text-align: left; /* Alinha o texto à esquerda */
+}
+
+#quemsomos .section-title {
+    font-size: 2em;
+    margin-bottom: 10px;
+    color: rgb(151, 199, 79);
+}
+
+#quemsomos .section-subtitle {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    color: #ffffffad;
+}
+
+#quemsomos p,
+#quemsomos ul {
+    margin-bottom: 15px;
+    color: #000000ad;
+}
+
+#quemsomos .img-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 20px;
+}
+
+#quemsomos .img-grid img {
+    flex: 1 1 150px;
+    max-width: 200px;
+    margin: 15px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+#quemsomos .img-grid img:hover {
+    transform: scale(2.2);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    #quemsomos .text-container {
+        flex-direction: column; /* Empilhar em dispositivos menores */
+    }
+
+    #quemsomos .left-content,
+    #quemsomos .right-content {
+        text-align: center; /* Centralizar o texto em dispositivos menores */
+        margin-right: 0; /* Remover o espaçamento entre os conteúdos */
+    }
+}
+
+
+/* Ocultar/mostrar */
+.hidden {
+    display: none;
+}
